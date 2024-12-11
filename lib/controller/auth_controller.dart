@@ -3,6 +3,11 @@ import 'package:crypto_wallet_app/constants/utils/exports.dart';
 class AuthProvider extends ChangeNotifier {
   TextEditingController loginemailController = TextEditingController();
   TextEditingController loginpasswordController = TextEditingController();
+  TextEditingController RegNameController = TextEditingController();
+  TextEditingController RegemailController = TextEditingController();
+  TextEditingController RegPasswordController = TextEditingController();
+  TextEditingController RegConfirmPassController = TextEditingController();
+  TextEditingController RegPhoneController = TextEditingController();
 
   int _currentStep = 0;
 
@@ -38,6 +43,14 @@ class AuthProvider extends ChangeNotifier {
 
   void passwordVisibility() {
     _isPasswordVisible = !_isPasswordVisible;
+    notifyListeners();
+  }
+
+   bool isRemember = false;
+  //===Remember_Me===//
+  
+  rememberMe() {
+    isRemember = !isRemember;
     notifyListeners();
   }
 }

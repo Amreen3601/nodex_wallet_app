@@ -8,6 +8,7 @@ class CustomTextField extends StatelessWidget {
   final IconData? suffixIcon;
   final bool isPassword;
   final VoidCallback? onSuffixIconTap;
+  final TextInputType keyboardType;
 
   const CustomTextField({
     Key? key,
@@ -18,6 +19,7 @@ class CustomTextField extends StatelessWidget {
     this.suffixIcon,
     this.isPassword = false,
     this.onSuffixIconTap,
+    this.keyboardType = TextInputType.text,
   }) : super(key: key);
 
   @override
@@ -26,9 +28,10 @@ class CustomTextField extends StatelessWidget {
       controller: controller,
       obscureText: obscureText,
       style: const TextStyle(color: AppColors.whiteOpacity90),
+      keyboardType: keyboardType,
       decoration: InputDecoration(
         hintText: hintText,
-        hintStyle: const TextStyle(color: AppColors.lightGrey),
+        hintStyle: const TextStyle(color: AppColors.customGrey),
         filled: true,
         fillColor: AppColors.grey900,
         border: OutlineInputBorder(

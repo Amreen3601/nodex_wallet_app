@@ -10,7 +10,6 @@ class LoginNodeXScreen extends StatelessWidget {
       backgroundColor: AppColors.secondaryColor,
       appBar: CustomAppBar(onPressed: () {
         Navigator.pop(context);
-        // Navigator.pushNamed(context, ScreenRoutes.loginScreen,
       }),
       body: Consumer<AuthProvider>(
         builder: (context, authProvider, child) {
@@ -61,7 +60,7 @@ class LoginNodeXScreen extends StatelessWidget {
                   20.heightBox,
                   'Email'.toText(
                     textStyle:
-                        MyTextStyles.medium(color: AppColors.primaryColor),
+                        MyTextStyles.medium(color: AppColors.lightGrey),
                   ),
                   3.heightBox,
                   CustomTextField(
@@ -74,7 +73,7 @@ class LoginNodeXScreen extends StatelessWidget {
                   10.heightBox,
                   'Password'.toText(
                     textStyle:
-                        MyTextStyles.medium(color: AppColors.primaryColor),
+                        MyTextStyles.medium(color: AppColors.lightGrey),
                   ),
                   3.heightBox,
                   CustomTextField(
@@ -108,7 +107,8 @@ class LoginNodeXScreen extends StatelessWidget {
                               color: AppColors.lightGrey, fontSize: 12.sp)),
                       GestureDetector(
                           onTap: () {
-                            // Navigate to Sign up
+                            Navigator.pushNamed(
+                                context, ScreenRoutes.registerScreen);
                           },
                           child: 'Sign up'.toText(
                               textStyle: MyTextStyles.medium(

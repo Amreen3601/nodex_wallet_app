@@ -13,7 +13,7 @@ export 'package:flutter/gestures.dart';
 export 'package:font_awesome_flutter/font_awesome_flutter.dart';
 export 'package:crypto_wallet_app/constants/custom_widgets/cstm_icon_btn.dart';
 export 'package:crypto_wallet_app/constants/custom_widgets/custom_appbar.dart';
-export 'package:crypto_wallet_app/view/auth_screen/login_page.dart';
+export 'package:crypto_wallet_app/view/auth_screen/authentication_screen.dart/login_page.dart';
 export 'package:crypto_wallet_app/constants/custom_widgets/custom_text_feild.dart';
 export 'package:crypto_wallet_app/constants/utils/validation.dart';
 export 'package:crypto_wallet_app/model/onboarding.dart';

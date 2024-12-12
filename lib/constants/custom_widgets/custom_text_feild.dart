@@ -31,7 +31,7 @@ class CustomTextField extends StatelessWidget {
       keyboardType: keyboardType,
       decoration: InputDecoration(
         hintText: hintText,
-        hintStyle: const TextStyle(color: AppColors.customGrey),
+        hintStyle: MyTextStyles.regular(),
         filled: true,
         fillColor: AppColors.grey900,
         border: OutlineInputBorder(
@@ -46,18 +46,12 @@ class CustomTextField extends StatelessWidget {
                 icon: Icon(
                   suffixIcon,
                   color: AppColors.lightGrey,
+                  size: 16,
                 ),
                 onPressed: onSuffixIconTap,
               )
             : null,
       ),
-      onChanged: (value) {
-        final errorText = validator(value);
-
-        if (errorText != null) {
-          (context as Element).markNeedsBuild();
-        }
-      },
     );
   }
 }

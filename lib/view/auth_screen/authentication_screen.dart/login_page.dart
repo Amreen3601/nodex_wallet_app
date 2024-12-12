@@ -25,24 +25,28 @@ class LoginNodeXScreen extends StatelessWidget {
                       .center,
                   40.heightBox,
                   CustomSocialIconButton(
+                    onPressed: () {},
                     icon: Icons.facebook,
-                    text: 'Continue with Facebook',
-                    iconColor: Colors.blue,
-                    onPressed: () {},
+                    iconColor: AppColors.facebookBlue,
+                    label: 'Continue with Facebook',
                   ),
                   10.heightBox,
                   CustomSocialIconButton(
+                    onPressed: () {},
                     icon: Icons.g_mobiledata,
-                    text: 'Continue with Google',
-                    iconColor: Colors.red,
-                    onPressed: () {},
+                    iconColor: AppColors.googleColor,
+                    label: 'Continue with Google',
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 90, vertical: 12),
                   ),
                   10.heightBox,
                   CustomSocialIconButton(
-                    icon: Icons.apple,
-                    text: 'Continue with Apple',
-                    iconColor: Colors.white,
                     onPressed: () {},
+                    icon: Icons.apple,
+                    iconColor: AppColors.primaryColor,
+                    label: 'Continue with Apple',
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 92, vertical: 12),
                   ),
                   30.heightBox,
                   Row(
@@ -59,8 +63,7 @@ class LoginNodeXScreen extends StatelessWidget {
                   ),
                   20.heightBox,
                   'Email'.toText(
-                    textStyle:
-                        MyTextStyles.medium(color: AppColors.lightGrey),
+                    textStyle: MyTextStyles.medium(color: AppColors.lightGrey),
                   ),
                   3.heightBox,
                   CustomTextField(
@@ -72,8 +75,7 @@ class LoginNodeXScreen extends StatelessWidget {
                   ),
                   10.heightBox,
                   'Password'.toText(
-                    textStyle:
-                        MyTextStyles.medium(color: AppColors.lightGrey),
+                    textStyle: MyTextStyles.medium(color: AppColors.lightGrey),
                   ),
                   3.heightBox,
                   CustomTextField(

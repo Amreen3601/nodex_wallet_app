@@ -36,7 +36,7 @@ class OnboardingScreen extends StatelessWidget {
                     children: [
                       TextSpan(
                         text: "Privacy Policy\n",
-                        style: MyTextStyles.bold(
+                        style: MyTextStyles.medium(
                           color: AppColors.whiteOpacity90,
                           fontSize: 10.sp,
                         ),
@@ -50,7 +50,7 @@ class OnboardingScreen extends StatelessWidget {
                       ),
                       TextSpan(
                         text: "Terms of Use",
-                        style: MyTextStyles.bold(
+                        style: MyTextStyles.medium(
                           color: AppColors.whiteOpacity90,
                           fontSize: 10.sp,
                         ),

@@ -1,38 +1,44 @@
 import 'package:crypto_wallet_app/constants/utils/exports.dart';
 
 class CustomSocialIconButton extends StatelessWidget {
-  final String text;
+  final VoidCallback onPressed;
   final IconData icon;
   final Color iconColor;
-  final VoidCallback onPressed;
+  final String label;
+  final Color backgroundColor;
+  final Color textColor;
+  final EdgeInsets padding;
 
   const CustomSocialIconButton({
     Key? key,
-    required this.icon,
-    required this.text,
-    required this.iconColor,
     required this.onPressed,
+    required this.icon,
+    required this.iconColor,
+    required this.label,
+    this.backgroundColor = AppColors.grey900,
+    this.textColor = AppColors.primaryColor,
+    this.padding = const EdgeInsets.symmetric(horizontal: 80, vertical: 12),
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton.icon(
-      onPressed: onPressed,
       style: ElevatedButton.styleFrom(
-        backgroundColor: AppColors.grey900,
-        foregroundColor: iconColor,
-        padding: EdgeInsets.symmetric(vertical: 12, horizontal: 90),
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+        backgroundColor: backgroundColor,
+        foregroundColor: textColor,
+        padding: padding,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(8),
+        ),
       ),
+      onPressed: onPressed,
       icon: Icon(
         icon,
         color: iconColor,
       ),
-      label: Text(
-        text,
-        style:
-            MyTextStyles.medium(color: AppColors.primaryColor, fontSize: 12.sp),
-      ),
-    );
+      label: Text(label,
+          style: MyTextStyles.medium(
+              fontSize: 12.sp, color: AppColors.whiteOpacity90)),
+    ).center;
   }
 }
